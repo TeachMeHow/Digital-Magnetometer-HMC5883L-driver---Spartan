@@ -58,11 +58,13 @@ architecture Behavioral of module_a is
          ReadCnt : IN  std_logic_vector(3 downto 0)
         );
     END COMPONENT;
+	 
 	 type stateType is (sSetup, sRead, sWrite);
 	 signal presState : stateType := sSetup;
 	 signal iNACK, iFIFO_Pop, iReset, iGo, iFIFO_Empty, iFIFO_Push, iFIFO_Full : std_logic;
 	 signal iFIFO_DO: std_logic_vector(7 downto 0);
 	 signal iReadCnt : std_logic_vector(3 downto 0);
+	 
 begin
 	i2c: I2C_Master
 		PORT MAP (

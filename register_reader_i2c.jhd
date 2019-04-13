@@ -1,0 +1,5 @@
+MODULE register_reader_i2c
+	SUBMODULE I2C_Master
+		INSTANCE XLXI_1
+	SUBMODULE register_reader
+		INSTANCE XLXI_2

@@ -1,0 +1,14 @@
+[Inputs]
+Reset
+Clk
+I2C_Busy
+=I2C_FIFO_DO[7:0]=
+[Outputs]
+I2C_Go
+I2C_FIFO_Pop
+I2C_FIFO_Push
+=I2C_Address[7:0]=
+=I2C_ReadCnt[3:0]=
+=I2C_FIFO_DI[7:0]=
+=LED[7:0]=
+[BiDir]
