@@ -1,4 +1,0 @@
-EN i2c_master NULL /home/imarobot/compas-test/I2C_Master.vhd sub00/vhpl00 1555150173
-AR i2c_master structure /home/imarobot/compas-test/I2C_Master.vhd sub00/vhpl01 1555150174
-EN module_a NULL /home/imarobot/compas-test/module_a.vhd sub00/vhpl02 1555150175
-AR module_a behavioral /home/imarobot/compas-test/module_a.vhd sub00/vhpl03 1555150176

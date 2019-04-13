@@ -1,3 +1,0 @@
-vhdl isim_temp "I2C_Master.vhd"
-vhdl isim_temp "module_a.vhd"
-vhdl isim_temp "module_a_test.vhd"
