@@ -1,0 +1,5 @@
+set -tmpdir "/home/imarobot/compas-test/xst/projnav.tmp"
+set -xsthdpdir "/home/imarobot/compas-test/xst"
+elaborate
+-ifn module_a.prj
+-ifmt mixed

@@ -1,0 +1,599 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: module_a.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "module_a.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "module_a"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : module_a
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/imarobot/compas-test/I2C_Master.vhd" in Library work.
+Architecture structure of Entity i2c_master is up to date.
+Compiling vhdl file "/home/imarobot/compas-test/module_a.vhd" in Library work.
+Entity <module_a> compiled.
+Entity <module_a> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <module_a> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <I2C_Master> in library <work> (architecture <structure>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <module_a> in library <work> (Architecture <Behavioral>).
+Entity <module_a> analyzed. Unit <module_a> generated.
+
+Analyzing Entity <I2C_Master> in library <work> (Architecture <structure>).
+    Set user-defined property "INIT =  0" for instance <RdNotWr> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregOut_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <NACK_12> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <sregIn_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBits_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntSCL_7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <cntBytes_3> in unit <I2C_Master>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "DRIVE =  12" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "SLEW =  20" for instance <IOB1> in unit <I2C_Master>.
+    Set user-defined property "CAPACITANCE =  DONT_CARE" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "DRIVE =  12" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IBUF_DELAY_VALUE =  0" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IBUF_LOW_PWR =  TRUE" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IFD_DELAY_VALUE =  AUTO" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "IOSTANDARD =  DEFAULT" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "SLEW =  20" for instance <IOB2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <state_FSM_FFd6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrWr_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_addrRd_0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM8> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM7> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM6> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM4> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM3> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0000" for instance <i_FIFO_Mram_RAM1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <i_FIFO_iFull> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <i_FIFO_iEmpty> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <Mcount_cntBits_xor_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <Mcount_cntBits_xor_2_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <Mcount_cntBits_xor_3_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <RdNotWr_and00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EB41" for instance <Mcount_cntBytes_xor_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <NACK_and00007> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FE54" for instance <sregOut_mux0000_0_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFBF" for instance <SCLout_mux00008> in unit <I2C_Master>.
+    Set user-defined property "INIT =  7" for instance <SCLout_mux000017> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFB" for instance <SCLout_mux000021> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C040" for instance <SCLout_mux000061> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <sregIn_and00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <SDAout_mux0003426> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8F88" for instance <state_FSM_FFd4_In1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EA" for instance <state_FSM_FFd2_In2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  08" for instance <state_FSM_FFd2_In12> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2232" for instance <state_FSM_FFd2_In26> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0080" for instance <SDAout_mux00038> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SDAout_mux000316> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF10" for instance <SDAout_mux000325> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F888" for instance <SDAout_mux0003431> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <SDAout_mux000393> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F7FF" for instance <SDAout_mux0003112> in unit <I2C_Master>.
+    Set user-defined property "INIT =  E" for instance <SDAout_mux0003139> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFD8" for instance <SDAout_mux0003180> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <i_FIFO_Result_1_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6" for instance <i_FIFO_Result_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F7FF" for instance <cntBytes_not0001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F2F0" for instance <cntBytes_not0001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FA8A" for instance <state_FSM_FFd3_In> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A888" for instance <state_FSM_FFd1_In_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <state_FSM_FFd1_In> in unit <I2C_Master>.
+    Set user-defined property "INIT =  E" for instance <cntSCL_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  BA" for instance <cntBits_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFD" for instance <sregOut_not000111> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FEAE" for instance <sregOut_not0001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  90" for instance <i_FIFO_iFull_and000076> in unit <I2C_Master>.
+    Set user-defined property "INIT =  80" for instance <i_FIFO_iFull_and000096> in unit <I2C_Master>.
+    Set user-defined property "INIT =  3237" for instance <i_FIFO_DoPop> in unit <I2C_Master>.
+    Set user-defined property "INIT =  5444" for instance <i_FIFO_DoPush40> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SCLout> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A8" for instance <SCLout_mux0000721> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <SDAout> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd5> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0" for instance <state_FSM_FFd2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_1_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_2_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_3_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_4_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_5_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_cy_6_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2" for instance <Mcount_cntSCL_xor_7_rt> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1" for instance <i_FIFO_DoPop_SW2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  ABFB" for instance <i_FIFO_iFull_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B" for instance <SDAout_mux000332_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0020" for instance <sclEnd_cmp_eq00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  ECA0" for instance <SDAout_mux00032041> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0040" for instance <i_FIFO_DoPush13> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFBF" for instance <sclEnd_cmp_eq00001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  2148" for instance <i_FIFO_iFull_and000071> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <i_FIFO_Result_3_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6AAA" for instance <i_FIFO_Result_3_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69C3" for instance <i_FIFO_iEmpty_and000058> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8000" for instance <sregOut_not0001_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69" for instance <i_FIFO_iEmpty_and000067> in unit <I2C_Master>.
+    Set user-defined property "INIT =  AE" for instance <i_FIFO_DoPush40_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <i_FIFO_DoPush40_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B8F0" for instance <i_FIFO_iEmpty_or00001> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF01" for instance <SDAout_mux0003157_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  028A" for instance <i_FIFO_iEmpty_and0000102> in unit <I2C_Master>.
+    Set user-defined property "INIT =  69C3" for instance <i_FIFO_iFull_and000048> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <NACK_and000020_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <NACK_and000022> in unit <I2C_Master>.
+    Set user-defined property "INIT =  A8FF" for instance <i_FIFO_DoPop_SW3_G> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F1FF" for instance <i_FIFO_DoPop_SW4_G> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <i_FIFO_Result_2_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  6A" for instance <i_FIFO_Result_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <SCLout_mux000063> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8F88" for instance <state_FSM_FFd5_In1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B313" for instance <Mcount_cntBytes_xor_0_11> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_7_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_6_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_5_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_4_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FD20" for instance <DI_0_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C9" for instance <Mcount_cntBytes_xor_2_1_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <Mcount_cntBytes_xor_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  AAA9" for instance <Mcount_cntBytes_xor_3_1_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <Mcount_cntBytes_xor_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_7_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_7_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_6_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_6_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_5_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_5_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_4_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_4_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_3_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_3_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_2_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_2_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_1_1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  EC4C" for instance <sregOut_mux0000_1_2> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <Mcount_cntBytes_xor_3_111> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0001" for instance <SDAout_mux0003412> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0001" for instance <SDAout_mux0003425> in unit <I2C_Master>.
+    Set user-defined property "INIT =  B" for instance <SDAout_mux000337> in unit <I2C_Master>.
+    Set user-defined property "INIT =  8" for instance <SDAout_mux000388> in unit <I2C_Master>.
+    Set user-defined property "INIT =  7" for instance <SDAout_mux0003107> in unit <I2C_Master>.
+    Set user-defined property "INIT =  F1" for instance <state_FSM_FFd3_In_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C404" for instance <sregOut_not0001_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  08" for instance <SDAout_mux000332> in unit <I2C_Master>.
+    Set user-defined property "INIT =  4000" for instance <NACK_and000011> in unit <I2C_Master>.
+    Set user-defined property "INIT =  D" for instance <i_FIFO_DoPop_SW1> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FF7F" for instance <i_FIFO_DoPush13_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  1000" for instance <SDAout_mux000358> in unit <I2C_Master>.
+    Set user-defined property "INIT =  C4" for instance <i_FIFO_DoPush0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFD" for instance <i_FIFO_DoPop_SW0> in unit <I2C_Master>.
+    Set user-defined property "INIT =  FFFE" for instance <SDAout_mux0003157> in unit <I2C_Master>.
+    Set user-defined property "INIT =  0990" for instance <i_FIFO_iEmpty_and0000102_SW0> in unit <I2C_Master>.
+Entity <I2C_Master> analyzed. Unit <I2C_Master> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <I2C_Master>.
+    Related source file is "/home/imarobot/compas-test/I2C_Master.vhd".
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM8_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM7_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM6_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM5_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM4_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM3_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM2_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_i_FIFO_Mram_RAM1_SPO_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <NLW_IOB2_O_UNCONNECTED> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <I2C_Master> synthesized.
+
+
+Synthesizing Unit <module_a>.
+    Related source file is "/home/imarobot/compas-test/module_a.vhd".
+WARNING:Xst:653 - Signal <iReset> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <iReadCnt> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+WARNING:Xst:646 - Signal <iNACK> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:653 - Signal <iGo> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <iFIFO_Push> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:653 - Signal <iFIFO_Pop> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+WARNING:Xst:646 - Signal <iFIFO_Full> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iFIFO_Empty> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <iFIFO_DO> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <module_a> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <module_a> ...
+
+Optimizing unit <I2C_Master> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block module_a, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : module_a.ngr
+Top Level Output File Name         : module_a
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 150
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 7
+#      LUT2                        : 13
+#      LUT2_D                      : 1
+#      LUT2_L                      : 3
+#      LUT3                        : 12
+#      LUT3_D                      : 2
+#      LUT3_L                      : 1
+#      LUT4                        : 70
+#      LUT4_D                      : 5
+#      LUT4_L                      : 5
+#      MUXCY                       : 7
+#      MUXF5                       : 9
+#      VCC                         : 1
+#      XORCY                       : 8
+# FlipFlops/Latches                : 52
+#      FDE                         : 21
+#      FDR                         : 11
+#      FDRE                        : 16
+#      FDRS                        : 1
+#      FDS                         : 3
+# RAMS                             : 8
+#      RAM16X1D                    : 8
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 16
+#      IOBUF                       : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       80  out of   4656     1%  
+ Number of Slice Flip Flops:             52  out of   9312     0%  
+ Number of 4 input LUTs:                140  out of   9312     1%  
+    Number used as logic:               124
+    Number used as RAMs:                 16
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clock                              | BUFGP                  | 60    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 7.884ns (Maximum Frequency: 126.839MHz)
+   Minimum input arrival time before clock: 4.538ns
+   Maximum output required time after clock: 6.250ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clock'
+  Clock period: 7.884ns (frequency: 126.839MHz)
+  Total number of paths / destination ports: 1401 / 181
+-------------------------------------------------------------------------
+Delay:               7.884ns (Levels of Logic = 4)
+  Source:            i2c/cntSCL_5 (FF)
+  Destination:       i2c/i_FIFO_iFull (FF)
+  Source Clock:      Clock rising
+  Destination Clock: Clock rising
+
+  Data Path: i2c/cntSCL_5 to i2c/i_FIFO_iFull
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.591   1.012  i2c/cntSCL_5 (i2c/cntSCL<5>)
+     LUT2:I1->O            2   0.704   0.451  i2c/SDAout_mux000332_SW0 (i2c/N71)
+     LUT4:I3->O           15   0.704   1.021  i2c/sclEnd_cmp_eq00001 (i2c/sclEnd)
+     LUT4:I3->O           13   0.704   1.018  i2c/i_FIFO_DoPush40 (i2c/i_FIFO_DoPush)
+     LUT3:I2->O            1   0.704   0.420  i2c/i_FIFO_iFull_and000096 (i2c/i_FIFO_iFull_and0000)
+     FDRE:CE                   0.555          i2c/i_FIFO_iFull
+    ----------------------------------------
+    Total                      7.884ns (3.962ns logic, 3.922ns route)
+                                       (50.3% logic, 49.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clock'
+  Total number of paths / destination ports: 26 / 19
+-------------------------------------------------------------------------
+Offset:              4.538ns (Levels of Logic = 3)
+  Source:            SDA (PAD)
+  Destination:       i2c/NACK_12 (FF)
+  Destination Clock: Clock rising
+
+  Data Path: SDA to i2c/NACK_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           2   1.218   0.482  i2c/IOB1 (i2c/SDAin)
+     LUT4:I2->O            1   0.704   0.455  i2c/NACK_and00007 (i2c/NACK_and00007_95)
+     LUT4:I2->O            1   0.704   0.420  i2c/NACK_and000022 (i2c/NACK_and0000)
+     FDRE:CE                   0.555          i2c/NACK_12
+    ----------------------------------------
+    Total                      4.538ns (3.181ns logic, 1.357ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clock'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              6.250ns (Levels of Logic = 2)
+  Source:            i2c/state_FSM_FFd5 (FF)
+  Destination:       Busy (PAD)
+  Source Clock:      Clock rising
+
+  Data Path: i2c/state_FSM_FFd5 to Busy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q            36   0.591   1.263  i2c/state_FSM_FFd5 (i2c/state_FSM_FFd5_243)
+     INV:I->O              1   0.704   0.420  i2c/state_FSM_Out71_INV_0 (Busy_OBUF)
+     OBUF:I->O                 3.272          Busy_OBUF (Busy)
+    ----------------------------------------
+    Total                      6.250ns (4.567ns logic, 1.683ns route)
+                                       (73.1% logic, 26.9% route)
+
+=========================================================================
+WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to i2c/IOB2.
+WARNING:Xst:616 - Invalid property "SLEW 20": Did not attach to i2c/IOB1.
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 4.29 secs
+ 
+--> 
+
+
+Total memory usage is 538472 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   20 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

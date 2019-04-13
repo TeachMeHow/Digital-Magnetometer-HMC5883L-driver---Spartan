@@ -1,0 +1,2 @@
+vhdl isim_temp "netgen/par/I2C_Master_timesim.vhd"
+vhdl isim_temp "test.vhd"

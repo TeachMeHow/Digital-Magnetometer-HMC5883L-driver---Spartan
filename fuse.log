@@ -1,0 +1,52 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/imarobot/compas-test/module_a_test_isim_beh.exe -prj /home/imarobot/compas-test/module_a_test_beh.prj work.module_a_test 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/imarobot/compas-test/I2C_Master.vhd" into library work
+Parsing VHDL file "/home/imarobot/compas-test/module_a.vhd" into library work
+Parsing VHDL file "/home/imarobot/compas-test/module_a_test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 122428 KB
+Fuse CPU Usage: 1450 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
+Compiling architecture fdr_v of entity FDR [\FDR('0')\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture iobuf_v of entity IOBUF [\IOBUF("DONT_CARE",12,"0",true,"...]
+Compiling architecture fds_v of entity FDS [\FDS('1')\]
+Compiling architecture ram16x1d_v of entity RAM16X1D [\RAM16X1D("0000000000000000")\]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("0110")(0,3)\]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("01101010")(0,7)\]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("0110101010101010")(0,15)\]
+Compiling architecture fdrs_v of entity FDRS [\FDRS('0')\]
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture muxf5_v of entity MUXF5 [muxf5_default]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture lut4_d_v of entity LUT4_D [\LUT4_D("1111111111111110")(0,15...]
+Compiling architecture lut2_l_v of entity LUT2_L [\LUT2_L("1011")(0,3)\]
+Compiling architecture lut3_l_v of entity LUT3_L [\LUT3_L("11110001")(0,7)\]
+Compiling architecture lut4_l_v of entity LUT4_L [\LUT4_L("1100010000000100")(0,15...]
+Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00001000")(0,7)\]
+Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
+Compiling architecture structure of entity I2C_Master [i2c_master_default]
+Compiling architecture behavioral of entity module_a [module_a_default]
+Compiling architecture behavior of entity module_a_test
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 184 VHDL Units
+Built simulation executable /home/imarobot/compas-test/module_a_test_isim_beh.exe
+Fuse Memory Usage: 701888 KB
+Fuse CPU Usage: 1840 ms
+GCC CPU Usage: 2660 ms

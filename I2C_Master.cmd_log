@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "/home/imarobot/compas-test/I2C_Master.xst" -ofn "/home/imarobot/compas-test/I2C_Master.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 I2C_Master.ngc I2C_Master.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o I2C_Master_map.ncd I2C_Master.ngd I2C_Master.pcf 
+par -w -intstyle ise -ol high -t 1 I2C_Master_map.ncd I2C_Master.ncd I2C_Master.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml I2C_Master.twx I2C_Master.ncd -o I2C_Master.twr I2C_Master.pcf 
+netgen -intstyle ise -s 4  -pcf I2C_Master.pcf -rpw 100 -tpw 0 -ar Structure -tm I2C_Master -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim I2C_Master.ncd I2C_Master_timesim.vhd 

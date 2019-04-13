@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml module_a.twx module_a.ncd -o module_a.twr module_a.pcf
+
+Design file:              module_a.ncd
+Physical constraint file: module_a.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock Clock
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+Data<0>     |    0.305(R)|    1.324(R)|Clock_BUFGP       |   0.000|
+Data<1>     |   -0.230(R)|    1.752(R)|Clock_BUFGP       |   0.000|
+Data<2>     |   -0.228(R)|    1.749(R)|Clock_BUFGP       |   0.000|
+Data<3>     |    0.336(R)|    1.298(R)|Clock_BUFGP       |   0.000|
+Data<4>     |    0.036(R)|    1.536(R)|Clock_BUFGP       |   0.000|
+Data<5>     |    0.315(R)|    1.313(R)|Clock_BUFGP       |   0.000|
+Data<6>     |   -0.243(R)|    1.759(R)|Clock_BUFGP       |   0.000|
+Data<7>     |    0.317(R)|    1.311(R)|Clock_BUFGP       |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock Clock to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+Busy        |    7.787(R)|Clock_BUFGP       |   0.000|
+SCL         |    7.453(R)|Clock_BUFGP       |   0.000|
+SDA         |    7.682(R)|Clock_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Clock          |    5.790|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sat Apr 13 11:58:17 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 348 MB
+
+
+
