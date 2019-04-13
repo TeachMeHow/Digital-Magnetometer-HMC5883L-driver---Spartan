@@ -93,4 +93,3 @@ begin
 	I2C_FIFO_DI <= X"0A" when state = sPush else X"00";
 	LED <= I2C_FIFO_DO when state = sEnd else X"00";
 end Behavioral;
-

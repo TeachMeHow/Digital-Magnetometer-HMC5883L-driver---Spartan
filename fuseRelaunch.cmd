@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/imarobot/compas-test/module_a_test_isim_beh.exe" -prj "/home/imarobot/compas-test/module_a_test_beh.prj" "work.module_a_test" 
+-intstyle "ise" -incremental -o "/home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test_isim_beh.exe" -prj "/home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test_beh.prj" "work.test" 
