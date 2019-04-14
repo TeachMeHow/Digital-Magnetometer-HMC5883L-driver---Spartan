@@ -21,6 +21,7 @@
         <signal name="FIFO_Empty" />
         <signal name="FIFO_Full" />
         <signal name="NACK" />
+        <signal name="XLXN_17" />
         <signal name="LED(7:0)" />
         <port polarity="Input" name="Clk" />
         <port polarity="Input" name="Reset" />

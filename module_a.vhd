@@ -22,7 +22,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
+use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx primitives in this code.
@@ -59,7 +59,9 @@ architecture Behavioral of module_a is
         );
     END COMPONENT;
 	 
-	 type stateType is (sSetup, sRead, sWrite);
+	 constant reset_period : integer := 20;
+	 type stateType is (sSetup, sReset, sRead, sWrite);
+	 signal reset_clk_counter : integer := reset_period;
 	 signal presState : stateType := sSetup;
 	 signal iNACK, iFIFO_Pop, iReset, iGo, iFIFO_Empty, iFIFO_Push, iFIFO_Full : std_logic;
 	 signal iFIFO_DO: std_logic_vector(7 downto 0);
@@ -91,10 +93,13 @@ begin
 				if presState = sSetup then
 					SDA <= 'H';
 					SCL <= 'H';
-					iReset <= '1';
-					presState <= sRead;
+					presState <= sReset;
+				elsif presState = sReset then
+					reset_clk_counter <= reset_clk_counter - 1;
+					if reset_clk_counter = 0 then
+						presState <= sRead;
+					end if;
 				elsif presState = sRead then
-					iReset <= '0';
 					iFIFO_Push <= '1'; 
 					presState <= sWrite;
 				elsif presState = sWrite then
@@ -103,6 +108,8 @@ begin
 				end if;
 			end if;
 		end process;
+		
+		iReset <= '1' when presState = sReset else '0';
 	
 		
 	

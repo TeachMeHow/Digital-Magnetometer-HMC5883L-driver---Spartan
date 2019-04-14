@@ -1,16 +1,18 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -o /home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test_isim_beh.exe -prj /home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test_beh.prj work.test 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -o "/home/imarobot/compas-test/module_a_test_isim_beh.exe" -prj "/home/imarobot/compas-test/module_a_test_beh.prj" "module_a_test" 
 ISim P.20131013 (signature 0xfbc00daa)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "/home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/I2C_Master.vhd" into library work
-Parsing VHDL file "/home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test.vhd" into library work
+Parsing VHDL file "/home/imarobot/compas-test/I2C_Master.vhd" into library work
+Parsing VHDL file "/home/imarobot/compas-test/module_a.vhd" into library work
+Parsing VHDL file "/home/imarobot/compas-test/module_a_test.vhd" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 121324 KB
-Fuse CPU Usage: 1120 ms
+Fuse Memory Usage: 123800 KB
+Fuse CPU Usage: 1830 ms
 Compiling package standard
 Compiling package std_logic_1164
+Compiling package numeric_std
 Compiling package vcomponents
 Compiling package textio
 Compiling package vital_timing
@@ -40,11 +42,12 @@ Compiling architecture lut4_l_v of entity LUT4_L [\LUT4_L("1100010000000100")(0,
 Compiling architecture lut3_d_v of entity LUT3_D [\LUT3_D("00001000")(0,7)\]
 Compiling architecture lut2_d_v of entity LUT2_D [\LUT2_D("1101")(0,3)\]
 Compiling architecture structure of entity I2C_Master [i2c_master_default]
-Compiling architecture behavior of entity test
+Compiling architecture behavioral of entity module_a [module_a_default]
+Compiling architecture behavior of entity module_a_test
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 182 VHDL Units
-Built simulation executable /home/sergio/Xilinx/Digital-Magnetometer-HMC5883L-driver---Spartan/test_isim_beh.exe
-Fuse Memory Usage: 1225124 KB
-Fuse CPU Usage: 1540 ms
-GCC CPU Usage: 2570 ms
+Compiled 185 VHDL Units
+Built simulation executable /home/imarobot/compas-test/module_a_test_isim_beh.exe
+Fuse Memory Usage: 705924 KB
+Fuse CPU Usage: 2200 ms
+GCC CPU Usage: 520 ms
