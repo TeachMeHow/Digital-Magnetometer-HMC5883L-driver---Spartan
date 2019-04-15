@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "/home/imarobot/compas-test/module_a_test_isim_beh.exe" -prj "/home/imarobot/compas-test/module_a_test_beh.prj" "module_a_test" 
+-intstyle "ise" -incremental -o "/home/imarobot/compas-test/driver_and_emulator_driver_and_emulator_sch_tb_isim_beh.exe" -prj "/home/imarobot/compas-test/driver_and_emulator_driver_and_emulator_sch_tb_beh.prj" "work.driver_and_emulator_driver_and_emulator_sch_tb" 

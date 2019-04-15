@@ -1,0 +1,6 @@
+[Inputs]
+SDA
+SCL
+[Outputs]
+=inByte[7:0]=
+[BiDir]

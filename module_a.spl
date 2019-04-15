@@ -1,0 +1,9 @@
+[Inputs]
+Clock
+=Data[7:0]=
+=Address[7:0]=
+[Outputs]
+SDA
+SCL
+Busy
+[BiDir]

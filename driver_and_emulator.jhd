@@ -1,0 +1,5 @@
+MODULE driver_and_emulator
+	SUBMODULE module_a
+		INSTANCE XLXI_2
+	SUBMODULE magnetometer_emulator
+		INSTANCE XLXI_3

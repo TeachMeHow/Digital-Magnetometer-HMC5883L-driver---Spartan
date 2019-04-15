@@ -33,8 +33,8 @@ entity module_a is
     Port ( Clock : in  STD_LOGIC;
            Data : in  STD_LOGIC_VECTOR (7 downto 0);
            Address : in  STD_LOGIC_VECTOR (7 downto 0);
-           SDA : inout  STD_LOGIC;
-           SCL : inout  STD_LOGIC;
+           SDA : out  STD_LOGIC;
+           SCL : out  STD_LOGIC;
            Busy : out  STD_LOGIC);
 end module_a;
 
@@ -66,12 +66,13 @@ architecture Behavioral of module_a is
 	 signal iNACK, iFIFO_Pop, iReset, iGo, iFIFO_Empty, iFIFO_Push, iFIFO_Full : std_logic;
 	 signal iFIFO_DO: std_logic_vector(7 downto 0);
 	 signal iReadCnt : std_logic_vector(3 downto 0);
+	 signal iSDA, iSCL : std_logic;
 	 
 begin
 	i2c: I2C_Master
 		PORT MAP (
-		SDA => SDA,
-		SCL => SCL,
+		SDA => iSDA,
+		SCL => iSCL,
 		Clk => Clock,
 		NACK => iNACK,
 		FIFO_Pop => iFIFO_Pop,
@@ -86,13 +87,15 @@ begin
 		FIFO_DI => Data,
 		ReadCnt => iReadCnt
 		);
-		
+		SDA <= iSDA;
+		SCL <= iSCL;
 		process(Clock)
 		begin
 			if rising_edge(Clock) then
 				if presState = sSetup then
 					SDA <= 'H';
 					SCL <= 'H';
+					iReset <= '1';
 					presState <= sReset;
 				elsif presState = sReset then
 					reset_clk_counter <= reset_clk_counter - 1;
@@ -100,6 +103,7 @@ begin
 						presState <= sRead;
 					end if;
 				elsif presState = sRead then
+					iReset <= '0';
 					iFIFO_Push <= '1'; 
 					presState <= sWrite;
 				elsif presState = sWrite then
@@ -109,7 +113,8 @@ begin
 			end if;
 		end process;
 		
-		iReset <= '1' when presState = sReset else '0';
+		-- DLA CZEGO JAK DAJĘ IRESET TU LUB w elsif presState = sReset TO NIE DZIAŁA?
+		--iReset <= '1' when presState = sReset else '0';
 	
 		
 	
